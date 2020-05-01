@@ -6,7 +6,11 @@ USE burgers_db;
 CREATE TABLE burgers
 (
 	id int NOT NULL AUTO_INCREMENT,
-	burger_name varchar(255) NOT NULL,
-	devoured BOOLEAN DEFAULT false,
+	burger_name varchar(110) NOT NULL,
+	devoured BOOLEAN DEFAULT 0,
+    date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY KEY (id)
 );
+
+
+(may need to put in --- date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,)

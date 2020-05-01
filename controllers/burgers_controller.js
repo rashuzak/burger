@@ -1,21 +1,15 @@
-/*Inside the `burgers_controller.js` file, import the following:
-
-   * Express
-   * `burger.js`
-
-4. Create the `router` for the app, and export the `router` at the end of your file.*/
-
-
+// Dependencies
 var express = require("express");
-
 var router = express.Router();
 
 // Import the model (burger.js) to use its database functions.
 var burger = require("../models/burger.js");
 
 // Create all our routes and set up logic within those routes where required.
+
+//Get request is to get contents from the database
 router.get("/", function(req, res) {
-  burger.all(function(data) {
+  burger.selectAll(function(data) {
     var hbsObject = {
       burgers: data
     };
@@ -24,47 +18,29 @@ router.get("/", function(req, res) {
   });
 });
 
-router.post("/api/burgers", function(req, res) {
-  burger.create([
-    "name", "sleepy"
-  ], [
-    req.body.name, req.body.sleepy
-  ], function(result) {
-    // Send back the ID of the new quote
-    res.json({ id: result.insertId });
-  });
-});
 
-router.put("/api/burgers/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+//Post request is to add burger to the database
+router.post("/", function(req, res) {
+  console.log(req.body.burger_name);
 
-  console.log("condition", condition);
-
-  burger.update({
-    sleepy: req.body.sleepy
-  }, condition, function(result) {
-    if (result.changedRows == 0) {
-      // If no rows were changed, then the ID must not exist, so 404
-      return res.status(404).end();
-    } else {
-      res.status(200).end();
+  if(req.body.burger_name !== "") {
+      burger.insertOne(req.body.burger_name.trim(), function() {
+              res.redirect("/");
+        });
     }
-  });
-});
+});  
+   
+// Put request is to update burger's status
+router.put("/:id", function(req, res) {
+  //var condition = "id = " + req.params.id;
 
-router.delete("/api/burgers/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+  console.log("id: ", req.params.id);
 
-  burger.delete(condition, function(result) {
-    if (result.affectedRows == 0) {
-      // If no rows were changed, then the ID must not exist, so 404
-      return res.status(404).end();
-    } else {
-      res.status(200).end();
-    }
-  });
-});
+  burger.updateOne(req.params.id, function () {
+    res.redirect("/");
+  });  
+})
+
 
 // Export routes for server.js to use.
 module.exports = router;
-
