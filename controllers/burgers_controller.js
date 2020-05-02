@@ -30,8 +30,8 @@ router.post("/", function(req, res) {
     }
 });  
    
-// Put request is to update burger's status
-router.put("/:id", function(req, res) {
+// Post request is to update burger's status
+router.post("/:id", function(req, res) {
   //var condition = "id = " + req.params.id;
 
   console.log("id: ", req.params.id);
