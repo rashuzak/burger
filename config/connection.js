@@ -1,9 +1,4 @@
-/* Inside the `connection.js` file, setup the code to connect Node to MySQL.
-
-   * Export the connection.*/
-
-
-  // Require mysql
+// Require mysql
 var mysql = require("mysql");
 
 // Set up our connection information

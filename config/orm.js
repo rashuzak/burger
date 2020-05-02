@@ -16,6 +16,7 @@ var orm = {
       cb(res);
     });
   },
+  
   insertOne: function(tableInput, columnName, burgerName, cb) {
     var queryString = "INSERT INTO ?? (??) Values (?)";
     connection.query(queryString, [tableInput, columnName, burgerName], function(err, res) {

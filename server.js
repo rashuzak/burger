@@ -7,9 +7,10 @@ var path = require("path");
 
 //creates express server and sets up a port
 var app = express(); 
-var PORT = process.env.PORT || 3030; 
+var PORT = process.env.PORT || 8080; 
 
 //Body Parser (Middleware)
+//app.use(methodOverride("_method"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.text());
@@ -23,9 +24,6 @@ app.set("view engine", "handlebars");
 app.use(express.static(__dirname + "/public"));
 app.use("/", router);
 
-/*Router
-require('./app/routing/apiRoutes.js')(app); 
-require('./app/routing/htmlRoutes.js')(app);*/
 
 //Listening to the port that was set up
 app.listen(PORT, function() {
