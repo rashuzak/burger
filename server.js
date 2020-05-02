@@ -7,7 +7,7 @@ var path = require("path");
 
 //creates express server and sets up a port
 var app = express(); 
-var PORT = process.env.PORT || 8080; 
+var PORT = process.env.PORT || 3000; 
 
 //Body Parser (Middleware)
 //app.use(methodOverride("_method"));

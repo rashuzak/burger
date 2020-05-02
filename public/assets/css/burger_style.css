@@ -1,22 +1,30 @@
 body {
-	color: #333;
-	font-family: Helvetica, Arial, sans-serif;
-	margin: 0;
-	background: #eee;
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    
+}
+img {
+    height: 110px;
+    width: auto;
+    align-items: center;
 }
 
 header {
-	background: #333;
+	background: blue;
 	margin: 0;
 	height: 60px;
 	display: flex;
-	align-items: center;
+    align-items: center;
+    
 }
+
+
 
 h1 {
 	margin: 0 0 0 100px;
 	color: #fff;
-	font-size: 30px;
+    font-size: 30px;
+    font-family: fantasy;
 }
 
 span {
@@ -43,22 +51,23 @@ button {
 #burgers-available {
 	flex-grow: 1;
 	padding: 0.5em 2em 1.7em 2em;
-	background: #71BC78;
-	margin: 1em 1em 1em 0;
+    margin: 1em 1em 1em 0;
+    border: 2px solid red;
+    border-radius: 12px;
 }
 
 #burgers-devoured {
 	flex-grow: 1;
-	background: #333;
 	padding: 0.5em 2em 1.7em 2em;
-	margin: 1em 0 1em 1em;
+    margin: 1em 0 1em 1em;
+    border: 2px solid red;
+    border-radius: 12px;
 }
 
-#burgers-devoured h2, #burgers-devoured div {
-	color: #ddd;
-}
 
 .wrapper {
+    background-image: url(../../public/assets/img/images.jpeg);
+	
 	max-width: 67%;
 	margin: 0 auto;
 }
@@ -71,7 +80,7 @@ h1 {
 	display: flex;
 	justify-content: center;
 	padding-top: 55px;
-	padding-bottom: 40px;
+    padding-bottom: 40px;
 }
 
 .burger {
@@ -86,7 +95,7 @@ h1 {
 #submit-btn {
 	padding: 0.57em 1em 0.57em 1em;
 	font-size: 1.5em;
-	background: #38eeff;
+	background: lightblue;
 	border: none;
 	margin-left: -5px;
 }
@@ -95,3 +104,12 @@ h1 {
 	padding: 0.5em 1em 0.5em 1em;
 	font-size: 1.5em;
 }
+
+/*color: #333;
+	font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    background: #eee;
+   background-image: url("../../public/assets/img/images.jpeg");
+   background-repeat: no-repeat;
+    background-size: cover;*/
+    

@@ -1,13 +1,12 @@
-<!--* Setup the `index.handlebars` to have the template that Handlebars can render onto.
-
-
-* Create a button in `index.handlebars` that will submit the user input into the database.-->
 
 <header>
-	<h1>Eat Da Burger!</h1>
+	
+    <h1>Eat Da Burger!</h1>
 </header> 
 
+
 <div class="wrapper">
+    
 	<div id="create-burger">
 		<form action="/" method="POST">
 			<input id="burger-name" type="text" name="burger_name" placeholder="Create a burger">
@@ -17,7 +16,7 @@
 
 	<section id="burgers-container">
 		<div id="burgers-available">
-			<h2>Burgers Available</h2>
+			<h2>Burger's Available</h2>
 			{{#each burgers}}
 				{{#unless this.devoured}}
 				  <div class="burger">
