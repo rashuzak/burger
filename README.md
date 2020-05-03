@@ -21,5 +21,5 @@ Created a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM
  **This assignment  deployed on Heroku link  AND the link to the Github Repository!
 
  
-
+Note: Need to fix Heroku connection
 
