@@ -18,7 +18,7 @@ Created a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM
 
 
 
- **This assignment must be deployed.** * Please submit both the deployed Heroku link to your homework AND the link to the Github Repository!
+ **This assignment  deployed on Heroku link  AND the link to the Github Repository!
 
  
 
